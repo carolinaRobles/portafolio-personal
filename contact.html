@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Carolina Robles - Ingeniera en Sistemas</title>
+  <!-- Estilos Globales y Específicos -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+  <!-- ================= ENCABEZADO Y NAVEGACIÓN (APPLE LIQUID GLASS) ================= -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">Carolina Robles<span>.</span></a>
+      <!-- Botón Menú para Móvil -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <!-- Enlaces de Navegación (Cápsulas iOS Liquid Glass sin emojis) -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="about.html" class="nav-link">Sobre mí</a></li>
+        <li><a href="skills.html" class="nav-link">Habilidades</a></li>
+        <li><a href="projects.html" class="nav-link">Proyectos</a></li>
+        <li><a href="contact.html" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
+  <main class="section container">
+    <div class="section-header">
+      <span class="section-tag">Conectemos</span>
+      <h2 class="section-title">Ponte en <span>Contacto</span></h2>
+      <p class="section-description">
+        ¿Tienes una propuesta laboral, proyecto de consultoría o deseas conversar sobre preventas y mejora de procesos?
+        Escríbeme a través de cualquiera de mis canales o completa el formulario.
+      </p>
+    </div>
+
+    <!-- Cuadrícula de Contacto (2 Columnas) -->
+    <div class="contact-grid">
+
+      <!-- Columna Izquierda: Canales Directos -->
+      <section class="contact-channels" aria-label="Canales directos de contacto">
+
+        <!-- Tarjeta WhatsApp -->
+        <article class="channel-card">
+          <div class="channel-icon">💬</div>
+          <div class="channel-info">
+            <h3 class="channel-title">WhatsApp</h3>
+            <p class="channel-value">+593 98 466 0901</p>
+            <div class="channel-actions">
+              <a href="https://wa.me/593984660901?text=Hola%20Carolina,%20vi%20tu%20portafolio%20profesional%20y%20me%20gustar%C3%ADa%20contactarte."
+                target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                Enviar mensaje
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta Correo Electrónico -->
+        <article class="channel-card">
+          <div class="channel-icon">✉️</div>
+          <div class="channel-info">
+            <h3 class="channel-title">Correo Electrónico</h3>
+            <p class="channel-value">cmichell1979@gmail.com</p>
+            <div class="channel-actions">
+              <a href="mailto:cmichell1979@gmail.com" class="btn btn-sm btn-primary">
+                Escribir correo
+              </a>
+              <button type="button" class="btn btn-sm btn-outline" id="copy-email-btn">
+                Copiar correo
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta LinkedIn -->
+        <article class="channel-card">
+          <div class="channel-icon">💼</div>
+          <div class="channel-info">
+            <h3 class="channel-title">LinkedIn</h3>
+            <p class="channel-value">linkedin.com/in/carolina-robles</p>
+            <div class="channel-actions">
+              <a href="https://www.linkedin.com/in/carolina-robles/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-sm btn-outline">
+                Ver perfil profesional
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta Ubicación -->
+        <article class="channel-card">
+          <div class="channel-icon">📍</div>
+          <div class="channel-info">
+            <h3 class="channel-title">Ubicación y Disponibilidad</h3>
+            <p class="channel-value">Durán / Guayaquil, Ecuador (Presencial, Híbrido o Remoto)</p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Columna Derecha: Formulario de Contacto -->
+      <section class="contact-form-card" aria-label="Formulario de contacto">
+        <h3>Envíale un mensaje a Carolina</h3>
+        <p class="subtitle">Completa el formulario y selecciona si deseas despacharlo por correo o abrir una
+          conversación directa por WhatsApp.</p>
+
+        <!-- Contenedor de Retroalimentación de Validación -->
+        <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+
+        <form id="contact-form" novalidate>
+          <!-- Campo: Nombre -->
+          <div class="form-group">
+            <label for="name">Nombre completo *</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Ej. Ana García" required>
+          </div>
+
+          <!-- Campo: Correo -->
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Ej. ana.garcia@empresa.com"
+              required>
+          </div>
+
+          <!-- Campo: Asunto -->
+          <div class="form-group">
+            <label for="subject">Asunto *</label>
+            <input type="text" id="subject" name="subject" class="form-control"
+              placeholder="Ej. Oportunidad laboral / Consultoría en preventa" required>
+          </div>
+
+          <!-- Campo: Mensaje -->
+          <div class="form-group">
+            <label for="message">Mensaje *</label>
+            <textarea id="message" name="message" class="form-control" rows="5"
+              placeholder="Cuéntame sobre tu proyecto, propuesta o consulta..." required></textarea>
+          </div>
+
+          <!-- Botones de Acción (Envío dual: Correo o WhatsApp) -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="send-email-btn">
+              <span>✉️</span> Enviar por Correo
+            </button>
+            <button type="button" class="btn btn-outline" id="send-whatsapp-btn">
+              <span>💬</span> Enviar por WhatsApp
+            </button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="footer-copy">
+        &copy; <span id="current-year"></span> <strong>Carolina Robles</strong> — Ingeniera en Sistemas.
+      </p>
+      <ul class="footer-links">
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        </li>
+        <li><a href="https://wa.me/593984660901" target="_blank" rel="noopener noreferrer"
+            class="footer-link">WhatsApp</a></li>
+        <li><a href="contact.html" class="footer-link">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts: Global y Específico de Contacto -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>

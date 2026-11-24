@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbd5b5"/>
+      <stop offset="100%" stop-color="#f6be95"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#avatar-bg)"/>
+
+  <!-- Decorative Tech Elements -->
+  <circle cx="70" cy="90" r="12" fill="#ffffff" opacity="0.25"/>
+  <circle cx="330" cy="110" r="8" fill="#ffffff" opacity="0.3"/>
+  <circle cx="340" cy="290" r="14" fill="#ffffff" opacity="0.2"/>
+  <circle cx="65" cy="300" r="10" fill="#ffffff" opacity="0.2"/>
+
+  <!-- Developer Silhouette / Illustration -->
+  <g filter="url(#shadow)">
+    <!-- Clothes / Shoulders -->
+    <path d="M100 370 C100 280, 140 260, 200 260 C260 260, 300 280, 300 370 Z" fill="url(#shirt)"/>
+    <!-- Collar -->
+    <path d="M175 260 L200 295 L225 260 Z" fill="#e0e7ff"/>
+    <!-- Neck -->
+    <rect x="180" y="215" width="40" height="50" rx="8" fill="url(#skin)"/>
+    <!-- Head -->
+    <ellipse cx="200" cy="175" rx="55" ry="65" fill="url(#skin)"/>
+    <!-- Hair -->
+    <path d="M142 165 C140 115, 175 95, 220 95 C255 95, 260 125, 258 150 C248 140, 230 135, 210 135 C175 135, 155 145, 142 165 Z" fill="#1e293b"/>
+    <!-- Glasses -->
+    <rect x="160" y="160" width="32" height="22" rx="6" fill="none" stroke="#0f172a" stroke-width="4"/>
+    <rect x="208" y="160" width="32" height="22" rx="6" fill="none" stroke="#0f172a" stroke-width="4"/>
+    <line x1="192" y1="170" x2="208" y2="170" stroke="#0f172a" stroke-width="4"/>
+    <line x1="145" y1="170" x2="160" y2="170" stroke="#0f172a" stroke-width="3"/>
+    <line x1="240" y1="170" x2="255" y2="170" stroke="#0f172a" stroke-width="3"/>
+    <!-- Smile -->
+    <path d="M185 205 Q200 218 215 205" fill="none" stroke="#c2410c" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Laptop / Code Badge Icon -->
+  <g transform="translate(145, 305)">
+    <rect x="0" y="0" width="110" height="70" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="3"/>
+    <rect x="12" y="10" width="86" height="42" rx="4" fill="#1e293b"/>
+    <text x="25" y="36" fill="#22c55e" font-family="monospace" font-size="18" font-weight="bold">&lt;/&gt;</text>
+    <rect x="58" y="27" width="30" height="4" rx="2" fill="#38bdf8"/>
+    <rect x="58" y="37" width="20" height="4" rx="2" fill="#94a3b8"/>
+    <rect x="40" y="60" width="30" height="4" rx="2" fill="#64748b"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p1-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="360" fill="url(#p1-bg)"/>
+  
+  <!-- Browser Frame -->
+  <rect x="40" y="30" width="520" height="300" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <rect x="40" y="30" width="520" height="35" rx="12" fill="#1e293b"/>
+  <!-- Browser Dots -->
+  <circle cx="65" cy="47" r="6" fill="#ef4444"/>
+  <circle cx="85" cy="47" r="6" fill="#f59e0b"/>
+  <circle cx="105" cy="47" r="6" fill="#10b981"/>
+  <rect x="140" y="40" width="280" height="15" rx="7" fill="#0f172a"/>
+  
+  <!-- Content Preview -->
+  <!-- Header Bar inside preview -->
+  <rect x="60" y="85" width="480" height="40" rx="8" fill="url(#card-grad)"/>
+  <rect x="75" y="98" width="80" height="14" rx="4" fill="#ffffff" opacity="0.9"/>
+  <rect x="420" y="98" width="45" height="14" rx="4" fill="#ffffff" opacity="0.6"/>
+  <rect x="480" y="98" width="45" height="14" rx="4" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Product Grid -->
+  <g transform="translate(60, 140)">
+    <rect x="0" y="0" width="145" height="160" rx="8" fill="#1e293b"/>
+    <rect x="10" y="10" width="125" height="80" rx="6" fill="#334155"/>
+    <rect x="10" y="102" width="90" height="12" rx="3" fill="#94a3b8"/>
+    <rect x="10" y="122" width="60" height="10" rx="3" fill="#64748b"/>
+    <rect x="95" y="125" width="40" height="20" rx="4" fill="#6366f1"/>
+    
+    <rect x="165" y="0" width="145" height="160" rx="8" fill="#1e293b"/>
+    <rect x="175" y="10" width="125" height="80" rx="6" fill="#334155"/>
+    <rect x="175" y="102" width="100" height="12" rx="3" fill="#94a3b8"/>
+    <rect x="175" y="122" width="55" height="10" rx="3" fill="#64748b"/>
+    <rect x="260" y="125" width="40" height="20" rx="4" fill="#6366f1"/>
+
+    <rect x="330" y="0" width="150" height="160" rx="8" fill="#1e293b"/>
+    <rect x="340" y="10" width="130" height="80" rx="6" fill="#334155"/>
+    <rect x="340" y="102" width="85" height="12" rx="3" fill="#94a3b8"/>
+    <rect x="340" y="122" width="50" height="10" rx="3" fill="#64748b"/>
+    <rect x="430" y="125" width="40" height="20" rx="4" fill="#6366f1"/>
+  </g>
+</svg>

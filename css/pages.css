@@ -1,0 +1,914 @@
+/* ==========================================================================
+   PAGES.CSS - Estilos específicos de las vistas (<main>)
+   Portafolio Profesional de Carolina Robles (Apple Liquid Glass: Grises Claros & Verde Agua)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. PÁGINA 1: INICIO (INDEX.HTML) - BANNER LIQUID GLASS CLARO
+   ========================================================================== */
+
+.hero-banner-section {
+  padding: 3rem 0 4rem 0;
+}
+
+.hero-banner {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(35px) saturate(180%);
+  -webkit-backdrop-filter: blur(35px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-xl);
+  padding: 3.75rem 3.25rem;
+  box-shadow: 
+    0 25px 60px -15px rgba(15, 23, 42, 0.08),
+    0 0 35px rgba(45, 212, 191, 0.15),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Refracción sutil de luz en verde agua en las esquinas */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.25), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.2), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* Distribución del banner: Texto a la izquierda (1.2fr), Foto a la DERECHA (360px) */
+.hero-banner-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 360px;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Columna Izquierda: Mensaje y Contenido */
+.hero-banner-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-greeting-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  background: rgba(45, 212, 191, 0.15);
+  padding: 0.38rem 1.05rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  margin-bottom: 1.35rem;
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.12);
+}
+
+.greeting-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-aqua-bright);
+  box-shadow: 0 0 10px var(--color-aqua-bright);
+  display: inline-block;
+}
+
+/* Titular: "Hola, mi nombre es Carolina Robles" */
+.hero-banner-title {
+  font-size: 2.9rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-text);
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-name-highlight {
+  background: linear-gradient(135deg, #0f172a 20%, #0d9488 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Subtítulo: "y soy Ingeniera en Sistemas" */
+.hero-banner-subtitle {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text-muted);
+  margin-bottom: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-role-highlight {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 55%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.hero-banner-description {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.hero-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.85rem;
+}
+
+.hero-banner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+/* Columna Derecha: Foto tipo PNG de Carolina con Iluminación Verde Agua */
+.hero-banner-photo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+/* Spotlight circular difuso en verde agua */
+.hero-spotlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.45) 0%, rgba(20, 184, 166, 0.18) 55%, transparent 75%);
+  filter: blur(35px);
+  z-index: 1;
+}
+
+/* Foto PNG recortada transparente a la derecha */
+.hero-banner-photo {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(15, 23, 42, 0.18)) drop-shadow(0 0 25px rgba(45, 212, 191, 0.35));
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+}
+
+.hero-banner:hover .hero-banner-photo {
+  transform: scale(1.025);
+  filter: drop-shadow(0 20px 30px rgba(15, 23, 42, 0.22)) drop-shadow(0 0 35px rgba(45, 212, 191, 0.5));
+}
+
+/* ==========================================================================
+   NUEVA SECCIÓN: DOS TARJETAS SEPARANDO TECNOLOGÍAS CON SUS LOGOS (INDEX.HTML)
+   ========================================================================== */
+.tech-cards-section {
+  padding: 1.5rem 0 4.5rem 0;
+}
+
+.tech-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.25rem;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: 
+    0 15px 35px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(45, 212, 191, 0.6);
+  box-shadow: 
+    0 22px 50px rgba(20, 184, 166, 0.15),
+    0 0 25px rgba(45, 212, 191, 0.2);
+}
+
+.tech-card-header {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.tech-card-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  background: rgba(45, 212, 191, 0.15);
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.65rem;
+}
+
+.tech-card-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.02em;
+}
+
+.tech-card-desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Lista de tecnologías con su logo oficial */
+.tech-logos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.95rem;
+  flex: 1;
+}
+
+.tech-logo-item {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 0.85rem 1.15rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.2px solid rgba(203, 213, 225, 0.6);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+  transition: var(--transition);
+}
+
+.tech-logo-item:hover {
+  background: #ffffff;
+  border-color: var(--color-aqua);
+  transform: translateX(4px);
+  box-shadow: 
+    0 6px 18px rgba(20, 184, 166, 0.18),
+    0 0 10px rgba(45, 212, 191, 0.15);
+}
+
+.tech-logo-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tech-logo-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-logo-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+.tech-logo-detail {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   2. PÁGINA 2: SOBRE MÍ (ABOUT.HTML)
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Tarjeta Izquierda: Biografía */
+.bio-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  box-shadow: 
+    0 15px 35px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.bio-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.bio-card p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.bio-highlights {
+  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.bio-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.bio-highlight-item span.icon {
+  font-size: 1.15rem;
+}
+
+/* Tarjeta Derecha: Línea de tiempo */
+.timeline-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  box-shadow: 
+    0 15px 35px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.timeline-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-aqua-bright), rgba(203, 213, 225, 0.5));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.25rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-aqua-bright);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.7);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: rgba(45, 212, 191, 0.15);
+  padding: 0.22rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  margin-bottom: 0.45rem;
+}
+
+.timeline-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-institution {
+  font-size: 0.92rem;
+  color: var(--color-primary);
+  margin-bottom: 0.55rem;
+  font-weight: 600;
+}
+
+.timeline-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   3. PÁGINA 3: HABILIDADES (SKILLS.HTML)
+   ========================================================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 2.35rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    0 15px 35px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+  transition: var(--transition);
+}
+
+.skill-category:hover {
+  border-color: rgba(45, 212, 191, 0.6);
+  box-shadow: 
+    0 20px 45px rgba(20, 184, 166, 0.15),
+    0 0 20px rgba(45, 212, 191, 0.2);
+  transform: translateY(-4px);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.category-header .category-icon {
+  font-size: 1.6rem;
+}
+
+.category-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.015em;
+}
+
+.skill-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.45rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.skill-name {
+  color: var(--color-text);
+}
+
+.skill-percentage {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(203, 213, 225, 0.45);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0d9488, #2dd4bf);
+  border-radius: var(--radius-full);
+  transition: width 1s ease-in-out;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.5);
+}
+
+/* ==========================================================================
+   4. PÁGINA 4: PROYECTOS (PROJECTS.HTML)
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.25rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 
+    0 15px 35px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(45, 212, 191, 0.6);
+  box-shadow: 
+    0 22px 50px rgba(20, 184, 166, 0.18),
+    0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+.project-img-wrapper {
+  width: 100%;
+  height: 215px;
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.85rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
+}
+
+.project-desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.35rem;
+  flex: 1;
+}
+
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.project-links .btn {
+  flex: 1;
+}
+
+/* ==========================================================================
+   5. PÁGINA 5: CONTACTO (CONTACT.HTML)
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Canales Directos (Columna Izquierda) */
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.channel-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 1.85rem;
+  transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  box-shadow: 
+    0 12px 30px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.channel-card:hover {
+  border-color: rgba(45, 212, 191, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 18px 40px rgba(20, 184, 166, 0.15),
+    0 0 18px rgba(45, 212, 191, 0.2);
+}
+
+.channel-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.channel-info {
+  flex: 1;
+}
+
+.channel-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.channel-value {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.85rem;
+  word-break: break-all;
+}
+
+.channel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+/* Formulario de Contacto (Columna Derecha) */
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 2.6rem;
+  box-shadow: 
+    0 15px 35px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.contact-form-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.contact-form-card p.subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(203, 213, 225, 0.8);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  transition: var(--transition);
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-aqua);
+  box-shadow: 
+    0 0 0 3px rgba(45, 212, 191, 0.25),
+    inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Alertas de Formulario */
+.form-feedback {
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.1rem;
+  display: none;
+}
+
+.form-feedback.show {
+  display: block;
+}
+
+.form-feedback.success {
+  background-color: rgba(45, 212, 191, 0.15);
+  border: 1px solid rgba(20, 184, 166, 0.4);
+  color: #0f766e;
+}
+
+.form-feedback.error {
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #b91c1c;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDAD ESPECÍFICA (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 950px) {
+  .hero-banner {
+    padding: 2.75rem 2rem;
+  }
+
+  .hero-banner-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-banner-photo-wrapper {
+    min-height: 320px;
+  }
+
+  .hero-banner-photo {
+    max-width: 280px;
+  }
+
+  .hero-spotlight {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-banner-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-banner-actions,
+  .hero-banner-tags {
+    justify-content: center;
+  }
+
+  .tech-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-banner-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-banner {
+    padding: 2rem 1.5rem;
+  }
+
+  .tech-card,
+  .bio-card,
+  .timeline-card,
+  .contact-form-card {
+    padding: 1.75rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
